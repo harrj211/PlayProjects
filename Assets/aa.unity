@@ -261,7 +261,6 @@ GameObject:
   - component: {fileID: 1395553864}
   - component: {fileID: 1395553863}
   - component: {fileID: 1395553862}
-  - component: {fileID: 1395553865}
   m_Layer: 6
   m_Name: Cube
   m_TagString: bun
@@ -276,14 +275,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1395553860}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0.008722395, y: -0.030537384, z: -0.00026649353, w: 0.9994956}
   m_LocalPosition: {x: 0.3914, y: -0.3971, z: 0.495}
   m_LocalScale: {x: 0.2172, y: 0.1761398, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1689362413}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -1, y: -3.5, z: 0}
 --- !u!65 &1395553862
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -347,20 +346,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1395553860}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1395553865
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1395553860}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae6e5fc504f824949bc72a1055a7e490, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  projectile: {fileID: 1939653861611263722, guid: 7a7b4a07b729c7d478ce234793b93338, type: 3}
-  launchVelocity: 1000
 --- !u!1 &1506661938
 GameObject:
   m_ObjectHideFlags: 0
@@ -670,6 +655,7 @@ GameObject:
   - component: {fileID: 1739185173}
   - component: {fileID: 1739185174}
   - component: {fileID: 1739185175}
+  - component: {fileID: 1739185176}
   m_Layer: 0
   m_Name: Crosshair
   m_TagString: Untagged
@@ -685,8 +671,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1739185172}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.05, y: -0.05, z: 1}
-  m_LocalScale: {x: 0.050000004, y: 0.05, z: 0.05}
+  m_LocalPosition: {x: 0, y: -0.05, z: 1}
+  m_LocalScale: {x: 0.03, y: 0.03, z: 0.03}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1689362413}
@@ -756,6 +742,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6366ee97f6b541449155028b9487355a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1739185176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1739185172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae6e5fc504f824949bc72a1055a7e490, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectile: {fileID: 1939653861611263722, guid: 7a7b4a07b729c7d478ce234793b93338, type: 3}
+  launchVelocity: 1000
 --- !u!1 &1828918388
 GameObject:
   m_ObjectHideFlags: 0

@@ -6,6 +6,7 @@ public class LaunchProjectile : MonoBehaviour
 {
     public GameObject projectile;
     public float launchVelocity = 700f;
+    public ParticleSystem muzzleflash;
 
     Vector3 launcher;
 
@@ -15,7 +16,16 @@ public class LaunchProjectile : MonoBehaviour
         {
             GameObject ball = Instantiate(projectile, transform.position, transform.rotation);
             ball.GetComponent<Rigidbody>().AddRelativeForce(new Vector3 (0, 0, launchVelocity));
+
+            muzzleflash.Play();
         }
+
+        else
+        {
+            muzzleflash.Stop();
+        }
+
+
 
 
     }
