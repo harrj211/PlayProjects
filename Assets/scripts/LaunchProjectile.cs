@@ -7,11 +7,14 @@ public class LaunchProjectile : MonoBehaviour
     public GameObject projectile;
     public float launchVelocity = 700f;
     public ParticleSystem muzzleflash;
+    float m_fieldofview;
 
     Vector3 launcher;
 
     void Update()
     {
+        m_fieldofview = 60f;
+
         if (Input.GetButton("Fire1"))
         {
             GameObject ball = Instantiate(projectile, transform.position, transform.rotation);
@@ -25,9 +28,15 @@ public class LaunchProjectile : MonoBehaviour
             muzzleflash.Stop();
         }
 
+        if (Input.GetButton("Fire2"))
+        {
+            m_fieldofview = 10f;
+        }
 
 
 
+    Camera.main.fieldOfView = m_fieldofview;
     }
+    
 
 }
